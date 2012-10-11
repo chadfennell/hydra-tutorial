@@ -73,7 +73,7 @@ class RecordsController < ApplicationController
   # DELETE /records/1.json
   def destroy
     @record = Record.find(params[:id])
-    @record.destroy
+    @record.delete
 
     respond_to do |format|
       format.html { redirect_to records_url }
